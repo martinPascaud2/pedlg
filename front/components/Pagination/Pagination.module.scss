@@ -1,0 +1,11 @@
+@import '~styles/variables';
+
+.pedlg__pagination {
+    a {
+        background-color: $white;
+
+        &:not([disabled]):not([class*='is-current']):hover {
+            background-color: $grey-lighter;
+        }
+    }
+}

@@ -1,0 +1,170 @@
+/**
+ * https://bulma.io/documentation/customize/variables
+ */
+
+@import '~bulma/sass/utilities/functions';
+
+// Colors
+
+$black: hsl(316, 10%, 4%);
+$black-bis: hsl(316, 10%, 7%);
+$black-ter: hsl(316, 10%, 14%);
+
+$grey-darker: hsl(316, 10%, 26%);
+$grey-dark: hsl(316, 10%, 38%);
+$grey: hsl(316, 10%, 50%);
+$grey-light: hsl(316, 10%, 72%);
+$grey-lighter: hsl(316, 10%, 76%);
+$grey-lightest: hsl(316, 10%, 80%);
+
+$white-ter: hsl(316, 10%, 90%);
+$white-bis: hsl(316, 10%, 94%);
+$white: hsl(316, 10%, 98%);
+
+$orange: hsl(31, 81%, 51%);
+$yellow: hsl(38, 100%, 69%);
+$green: hsl(145, 43%, 54%);
+$cyan: hsl(216, 49%, 67%);
+$blue: hsl(207, 71%, 55%);
+$purple: hsl(316, 50%, 28%);
+$red: hsl(350, 80%, 55%);
+
+// Typography
+
+$family-sans-serif: 'Nunito', BlinkMacSystemFont, -apple-system, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$family-monospace: monospace;
+$render-mode: optimizeLegibility;
+
+$size-1: 3rem;
+$size-2: 2.5rem;
+$size-3: 2rem;
+$size-4: 1.5rem;
+$size-5: 1.25rem;
+$size-6: 1rem;
+$size-7: 0.75rem;
+
+$weight-light: 300;
+$weight-normal: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+
+// Spacing
+
+$block-spacing: 1.5rem;
+
+// Responsiveness
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 32px;
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px;
+// 960px container + 4rem
+$desktop: 960px + (2 * $gap);
+// 1152px container + 4rem
+$widescreen: 1152px + (2 * $gap);
+$widescreen-enabled: true;
+// 1344px container + 4rem
+$fullhd: 1344px + (2 * $gap);
+$fullhd-enabled: true;
+
+// Miscellaneous
+
+$easing: ease-in-out;
+$radius-small: 2px;
+$radius: 4px;
+$radius-large: 6px;
+$radius-rounded: 290486px;
+$speed: 86ms;
+
+$modal-background-background-color: rgba($black-ter, 0.75);
+$modal-content-padding: 1.25rem;
+$modal-content-width: 45em;
+
+$label-color: $grey;
+$label-weight: 500;
+
+$hr-height: 1px;
+
+$input-background-color: $white-bis;
+
+$divider-gap: 1.5rem;
+
+// Derived
+
+// General Colors
+
+$scheme-main: $white;
+$scheme-main-bis: $white-bis;
+$scheme-main-ter: $white-ter;
+$scheme-invert: $black;
+$scheme-invert-bis: $black-bis;
+$scheme-invert-ter: $black-ter;
+
+$background: $white-bis;
+$body-background-color: $background;
+
+$border: $grey-lighter;
+$border-hover: $grey-light;
+$border-light: $grey-lightest;
+$border-light-hover: $grey-light;
+
+// Colors
+
+$primary: $green;
+
+$light: $white-ter;
+$dark: $black-ter;
+
+$info: $purple;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+$link: $blue;
+$hover: $light;
+$text: $grey-dark;
+
+// Customization
+
+$body-size: 14px;
+
+$navbar-height: 4rem;
+
+$footer-background-color: $white-ter;
+
+$title-color: $grey-dark;
+$subtitle-color: $grey;
+
+$notification-background-color: $grey-lighter;
+
+$divider-color: $border;
+$divider-background-color: $border;
+$divider-thickness: $hr-height;
+
+$menu-label-font-size: 0.9rem;
+$menu-item-active-background-color: $primary;
+$menu-item-hover-background-color: rgba($primary, .25);
+
+$message-header-padding: 1em;
+$message-body-padding: 1em;
+
+$table-head-cell-color: $grey;
+$table-foot-cell-color: $grey;
+$table-head-cell-border-width: 0 0 1px;
+$table-foot-cell-border-width: 1px 0 0;
+
+$pagination-color: $grey;
+$pagination-border-color: transparent;
+
+$pagination-hover-border-color: transparent;
+$pagination-focus-border-color: transparent;
+
+$pagination-current-color: findColorInvert($primary);
+$pagination-current-border-color: transparent;
+$pagination-current-background-color: $primary;
+
+$pagination-item-margin: 0.15rem;
+
+$progress-bar-background-color: $red;

@@ -1,0 +1,38 @@
+@import '~styles/_variables';
+
+.pedlg__dropdown {
+    .menu {
+        width: 100%;
+        max-width: 100%;
+
+        .content {
+            max-height: 20em;
+            overflow-x: auto;
+            border: 1px solid $link;
+            border-radius: $radius;
+            padding: 0;
+            animation: hello 200ms both ease-in-out;
+
+            .item {
+                white-space: normal;
+                padding: .75rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $border;
+                }
+            }
+        }
+    }
+}
+
+@keyframes hello {
+    0% {
+        opacity: 0;
+        margin-top: -7px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}

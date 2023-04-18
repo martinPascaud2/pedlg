@@ -1,0 +1,90 @@
+@import '~bulma/sass/utilities/functions';
+@import '~styles/_variables';
+
+.has-content-vcentered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.is-horizontal {
+    flex-direction: row;
+}
+
+.is-vertical {
+    flex-direction: column;
+}
+
+.is-flex {
+    &.is-aligned {
+        align-content: center;
+    }
+
+    &.is-direction-column {
+        flex-direction: column;
+    }
+
+    &.is-direction-row {
+        flex-direction: row;
+    }
+}
+
+.has-text-small {
+    font-size: 85%;
+}
+
+.is-rounded {
+    border-radius: $radius-rounded
+}
+
+.has-radius {
+    border-radius: $radius;
+}
+
+.has-radius-small {
+    border-radius: $radius-small;
+}
+
+.has-radius-large {
+    border-radius: $radius-large;
+}
+
+.has-text-ellipsized {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.is-clickable {
+    cursor: pointer;
+    pointer-events: initial !important;
+}
+
+.is-spinning {
+    animation-name: spin;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.is-scrollable-x {
+    overflow-x: auto;
+}
+
+.is-scrollable-y {
+    overflow-y: auto;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "airbnb",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": ["react"],
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "packageDir": "."
+            }
+        ],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/jsx-props-no-spreading": [
+            "error",
+            {
+                "custom": "ignore"
+            }
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [
+            "error",
+            {
+                "extensions": [".js", "jsx"]
+            }
+        ],
+        "react/jsx-wrap-multilines": [
+            "error",
+            {
+                "prop": "ignore"
+            }
+        ],
+        "jsx-a11y/label-has-for": "off",
+        "jsx-a11y/anchor-is-valid": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "moduleDirectory": [".", "public", "node_modules"]
+            }
+        }
+    }
+}

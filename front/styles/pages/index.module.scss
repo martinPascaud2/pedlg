@@ -1,0 +1,52 @@
+@import '~styles/_variables';
+
+#pedlg__index-banner {
+    margin-top: -$navbar-height;
+    padding-top: $navbar-height;
+    background-image: url('/assets/images/index_hero.jpg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .pedlg__index-banner-text {
+        text-shadow: 0 0 50px rgba($black, 0.2), 0 0 75px rgba($black, 0.7);
+    }
+}
+#pedlg__index-home {
+    .img-home {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        transition-property: transform, filter;
+        transition-duration: 0.7s;
+        position: relative;
+        filter: brightness(0.8);
+        & .subtext {
+            position: absolute;
+            font-weight: bold;
+            border-bottom: 0px solid $white;
+            line-height: 30px;
+            transition: border-bottom-width 0.1s;
+        }
+        &:hover {
+            transform: scale(1.02);
+            filter: brightness(100%);
+        }
+        &:hover .subtext {
+            border-bottom-width: 2px;
+        }
+    }
+
+    .img-old-variety {
+        background-image: url('/assets/images/index/old-variety.jpg');
+    }
+    .img-infusion-variety {
+        background-image: url('/assets/images/index/infusion.jpg');
+    }
+    .img-medicinal-variety {
+        background-image: url('/assets/images/index/medicinal.jpg');
+    }
+    .img-aromatic-variety {
+        background-image: url('/assets/images/index/aromatic.jpg');
+    }
+}

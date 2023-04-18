@@ -1,0 +1,15 @@
+@import '~styles/variables';
+
+.progressWrapper {
+  position: relative;
+}
+
+.progressValue {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: calc(1rem / 1.5);
+  line-height: 1rem;
+  font-weight: bold;
+}

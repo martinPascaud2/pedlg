@@ -1,0 +1,9 @@
+@import '~styles/_variables';
+
+.checkbox input[type=checkbox] {
+    margin-right: .5rem;
+}
+
+.checkbox.is-danger {
+    border-bottom: 1px dashed $danger;
+}

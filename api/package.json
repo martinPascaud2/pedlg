@@ -1,0 +1,71 @@
+{
+    "name": "pedlg",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon src/server.js",
+        "deploy": "node src/server.js",
+        "precommit": "lint-staged",
+        "deploy": "node src/server.js",
+        "db:create": " npx sequelize db:create",
+        "db:migrate": "npx sequelize db:migrate",
+        "db:refresh": "npx sequelize db:drop; npx sequelize db:create; npx sequelize db:migrate"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "and": "^0.0.3",
+        "apollo-error-converter": "^1.1.1",
+        "apollo-server": "^2.14.2",
+        "apollo-server-express": "^2.10.0",
+        "bcrypt": "^4.0.1",
+        "canvas": "^2.6.1",
+        "cookie-parser": "^1.4.5",
+        "cors": "^2.8.5",
+        "cron": "^1.8.2",
+        "crypto": "^1.0.1",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "fs": "^0.0.1-security",
+        "hashids": "^2.2.1",
+        "helmet": "^3.21.3",
+        "http": "^0.0.1-security",
+        "jwt-redis": "^5.0.11",
+        "morgan": "^1.9.1",
+        "mysql2": "^2.1.0",
+        "nodemailer": "^6.4.4",
+        "passport": "^0.4.1",
+        "passport-facebook": "^3.0.0",
+        "passport-google-oauth20": "^2.0.0",
+        "rand-token": "^1.0.1",
+        "redis": "^3.0.2",
+        "sequelize": "^5.21.5",
+        "string-similarity": "^4.0.1"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb": "^18.0.1",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-node": "^11.0.0",
+        "husky": "^4.2.3",
+        "lint-staged": "^10.0.7",
+        "mysql2": "^2.1.0",
+        "nodemon": "^2.0.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.js": [
+            "eslint --fix src/"
+        ]
+    }
+}

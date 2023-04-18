@@ -1,0 +1,30 @@
+@import '~styles/variables';
+
+.has-no-outline {
+    outline: none;
+}
+
+.rc-slider-track {
+    color: $primary;
+}
+
+.pedlg__filter-sidebar {
+    input[type='radio']:not(:checked):before {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        background-color: white;
+        content: '';
+        display: inline-block;
+        border: 1px solid $primary;
+    }
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        background-color: $primary;
+        content: '';
+        display: inline-block;
+        border: 2px solid white;
+    }
+}

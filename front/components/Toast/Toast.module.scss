@@ -1,0 +1,42 @@
+@import '~styles/_variables';
+
+.pedlg__toast {
+    box-shadow: 0 .5em 1em -.125em rgba($scheme-invert, .1), 0 0 0 1px rgba($scheme-invert, .02);
+
+    &.is-created {
+        animation: slideIn 175ms both ease-in-out;
+    }
+
+    &.is-closing {
+        animation: slideOut 175ms both ease-in-out;
+    }
+
+    &.is-shakey {
+        animation: shake 500ms both ease-in-out;
+    }
+}
+
+@keyframes slideIn {
+    0%      { right: -1000px; }
+    100%    { right: 0; }
+}
+
+@keyframes slideOut {
+    0%      { right: 0; }
+    100%    { right: -1000px; }
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}

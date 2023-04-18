@@ -1,0 +1,11 @@
+@import '~styles/_variables';
+
+.pedlg__search-control {
+    flex: 1;
+
+    .search-input {
+        border: 10;
+        background-color: $white-ter;
+        box-shadow: none;
+    }
+}

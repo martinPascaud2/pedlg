@@ -1,0 +1,203 @@
+@import 'styles/_variables';
+
+$card-spacing: 0.5rem;
+
+.pedlg__list {
+    display: flex;
+    flex-direction: column;
+
+    &.is-loading {
+        .item.list-col {
+            opacity: 0.25;
+        }
+    }
+
+    .item {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        width: 100%;
+        position: relative;
+        justify-content: center;
+        padding: 0.75rem;
+        margin-bottom: 0.75rem;
+        border: 1px solid $border;
+        border-radius: $radius-large;
+        transition: border 150ms $easing, margin-bottom 150ms $easing;
+
+        &.is-empty {
+            flex: 1 !important;
+            color: $grey-light;
+        }
+
+        &.loader {
+            flex: 1 !important;
+        }
+
+        &.is-clickable {
+            cursor: pointer;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $grey-light;
+        }
+
+        .list-col {
+            display: inline-flex;
+            align-items: center;
+            flex: 1 1 0;
+            opacity: 1;
+            overflow-x: auto;
+            overflow-wrap: nowrap;
+        }
+
+        .actions {
+            padding: .5rem .5rem 0 .5rem;
+            border-radius: 0 0 $radius-large $radius-large;
+            background-color: $background;
+        }
+
+        @media screen and (max-width: $tablet - 1px) {
+            .list-col {
+                flex: none;
+                width: 100% !important;
+                padding-bottom: 0.75rem;
+                padding-top: 0.75rem;
+                border-top: 1px solid $border;
+
+                &:first-child {
+                    padding-top: 0;
+                    border-top: 0;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+
+            .actions {
+                flex: 1;
+                border-top: 1px solid $border;
+                margin: 0 -.75rem -.75rem -.75rem;
+
+                .action {
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    &.is-list {
+        @media screen and (min-width: $tablet) {
+            margin-bottom: $block-spacing;
+
+            .item {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .list-col {
+                    &.is-aligned-left {
+                        justify-content: left;
+                    }
+
+                    &.is-aligned-center {
+                        justify-content: center;
+                    }
+
+                    &.is-aligned-right {
+                        justify-content: right;
+                    }
+
+                    @for $i from 0 through 12 {
+                        &.is-#{$i} {
+                            flex: none;
+                            width: percentage($i / 12);
+                        }
+                    }
+                }
+
+                &.has-actions:hover,
+                &.has-actions.show-actions {
+                    border-radius: $radius-large $radius-large 0 0;
+                    margin-bottom: 3.75rem;
+
+                    .actions {
+                        display: flex;
+                        border: 1px solid $grey-light;
+                        border-top-color: $border;
+                        opacity: 1;
+                    }
+                }
+
+                .actions {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    margin-right: -1px;
+                    margin-left: -1px;
+                    justify-content: right;
+                    opacity: 0;
+                    animation: hello 150ms both ease-in-out;
+                }
+            }
+        }
+    }
+
+    &.is-card {
+        @media screen and (min-width: $tablet) {
+            margin-top: -$card-spacing;
+            margin-bottom: calc(#{$block-spacing} - #{$card-spacing});
+            margin-left: -$card-spacing;
+            margin-right: -$card-spacing;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .item {
+                flex: 0 1;
+                min-width: calc(33.33% - #{$card-spacing} * 2);
+                margin: $card-spacing;
+
+                .list-col {
+                    flex: none;
+                    width: 100%;
+                    padding-bottom: 0.75rem;
+                    padding-top: 0.75rem;
+                    border-top: 1px solid $border;
+
+                    &:first-child {
+                        padding-top: 0;
+                        border-top: 0;
+                    }
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                }
+
+                .actions {
+                    flex: 1;
+                    border-top: 1px solid $border;
+                    margin: 0 -0.75rem -0.75rem -0.75rem;
+
+                    .action {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes hello {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,20 @@
+@import '~styles/_variables';
+
+.pedlg__navbar {
+    transition: all $easing 250ms;
+
+    @media screen and (max-width: $desktop - 1px) {
+        .pedlg__navbar-menu {
+            padding-bottom: 1rem;
+        }
+    }
+
+    .pedlg__burger {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pedlg__logo {
+        margin-right: 0.5rem;
+    }
+}

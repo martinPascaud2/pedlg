@@ -1,0 +1,21 @@
+@import '~styles/_variables';
+
+.pedlg__search-controls {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+
+    .search-new {
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width: $tablet - 1px) {
+        fieldset {
+            width: 100%;
+        }
+
+        .search-new {
+            width: 100%;
+        }
+    }
+}

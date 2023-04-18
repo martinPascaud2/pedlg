@@ -1,0 +1,55 @@
+@import '~styles/_variables';
+
+.container {
+	overflow: hidden;
+}
+
+.subTitle {
+	outline: none !important;
+}
+
+.id-card {
+	border-radius: 6px;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
+.id-text {
+	overflow: visible !important;
+}
+
+.baseline-icon {
+	vertical-align: middle;
+}
+
+.topline-icon {
+	vertical-align: top;
+}
+
+.id-picture-box {
+}
+
+.cardHr {
+	width: 70%;
+}
+
+.extras {
+	position: absolute !important;
+	bottom: 20px !important;
+}
+
+.icons {
+	margin-left: 20px;
+}
+
+.feat {
+	margin: 10px !important;
+}
+
+.whoHasDataIcon {
+	overflow: hidden !important;
+}
+
+.listItem {
+	margin-top: 10px;
+}

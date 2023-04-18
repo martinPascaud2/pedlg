@@ -1,0 +1,42 @@
+{
+  "name": "pedlg",
+  "version": "1.0.0",
+  "description": "Prends-en de la Graine",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:js:fix": "yarn run eslint . --ext .js,.jsx --fix",
+    "front": "cd front && yarn dev",
+    "api": "cd api && yarn start",
+    "clear": "rimraf node_modules front/node_modules api/node_modules yarn.lock package-lock.json front/package-lock.json api/package-lock.json",
+    "start": "concurrently -kill-others \"yarn api\" \"yarn front\""
+  },
+  "dependencies": {
+    "concurrently": "^4.1.2"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lerna": "^3.20.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/prends-en-de-la-graine/pedlg-next.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/prends-en-de-la-graine/pedlg-next/issues"
+  },
+  "homepage": "https://gitlab.com/prends-en-de-la-graine/pedlg-next#readme",
+  "workspaces": [
+    "front",
+    "api"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-push": "lerna run --concurrency 1 --stream precommit --since HEAD",
+      "pre-commit": "lerna run --concurrency 1 --stream precommit --since HEAD"
+    }
+  }
+}

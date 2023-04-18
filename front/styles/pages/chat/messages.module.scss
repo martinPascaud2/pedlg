@@ -1,0 +1,54 @@
+@media screen and (max-width: 768px) {
+    .container {
+        //overflow-x: hidden;
+    }
+}
+
+.chatItem {
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.22);
+    }
+}
+
+.box {
+    background-color: hsl(316, 10%, 98%) !important;
+    min-height: 70vh;
+}
+
+.divHidden {
+    border-color: white !important;
+}
+
+.stickyMobileButton {
+    position: sticky !important;
+    top: 20% !important;
+    z-index: 1;
+}
+
+.messages {
+    min-height: 65vh;
+}
+
+.myMessage {
+    & div {
+        color: white !important;
+        background-color: hsl(145, 43%, 54%) !important;
+    }
+    & svg {
+        fill: hsl(145, 43%, 54%) !important;
+    }
+}
+
+.hisMessage {
+    & div {
+        color: black !important;
+        background-color: white !important;
+    }
+    & svg {
+        fill: white !important;
+    }
+}

@@ -1,0 +1,28 @@
+@import '~styles/_variables';
+
+.pedlg__actionable-setting {
+    border-radius: $radius-small;
+
+    &:hover {
+        background-color: $hover;
+    }
+
+    .pedlg__setting-value {
+        padding-right: 5.5rem;
+
+        @media screen and (max-width: $tablet - 1px) {
+            padding-right: 0;
+        }
+    }
+}
+
+.pedlg__setting-value {
+    overflow-wrap: anywhere;
+    word-wrap: break-all;
+}
+
+.pedlg__setting-edit {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+}

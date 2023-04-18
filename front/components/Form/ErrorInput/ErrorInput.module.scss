@@ -1,0 +1,7 @@
+@import '~styles/_variables';
+
+.input-error-wrapper {
+    margin-bottom: .5rem;
+    font-weight: 600;
+    color: $danger;
+}

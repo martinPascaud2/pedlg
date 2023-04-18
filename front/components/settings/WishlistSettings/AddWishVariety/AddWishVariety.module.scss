@@ -1,0 +1,15 @@
+@import '~styles/_variables';
+
+.pedlg__add-to-wish {
+    .search-input {
+        &.is-selected {
+            font-weight: 600;
+        }
+    }
+
+    @media screen and (max-width: $tablet - 1px) {
+        button {
+            flex-grow: 1;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+$spaces: (
+    '0': 0,
+    '1': 0.25rem,
+    '2': 0.5rem,
+    '3': 0.75rem,
+    '4': 1rem,
+    '5': 1.25rem,
+    '6': 1.5rem,
+    '7': 1.75rem,
+    '8': 2rem,
+    'auto': auto,
+);
+
+$sides: (top, bottom, left, right);
+
+@each $space, $value in $spaces {
+    .has-margin-#{$space} {
+        margin: #{$value} !important;
+    }
+    .has-margin-bottom-#{$space} {
+        margin-bottom: #{$value} !important;
+    }
+
+    .has-padding-#{$space} {
+        padding: #{$value} !important;
+    }
+
+    .has-padding-x-#{$space} {
+        padding-left: #{$value} !important;
+        padding-right: #{$value} !important;
+    }
+    .has-padding-y-#{$space} {
+        padding-top: #{$value} !important;
+        padding-bottom: #{$value} !important;
+    }
+
+    @each $side in $sides {
+        .has-margin-#{$side}-#{$space} {
+            margin-#{$side}: #{$value} !important;
+        }
+
+        .has-padding-#{$side}-#{$space} {
+            padding-#{$side}: #{$value} !important;
+        }
+    }
+}
